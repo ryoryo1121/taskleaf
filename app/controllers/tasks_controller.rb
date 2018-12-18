@@ -27,7 +27,6 @@ class TasksController < ApplicationController
   end
   def destroy
     @task.destroy
-    head :no_content
   end
   def create
    @task = current_user.tasks.new(task_params)
