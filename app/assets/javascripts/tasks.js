@@ -9,3 +9,13 @@ document.addEventListener('turbolinks:load', function() {
     });
   });
 });
+
+document.addEventListener('turbolinks:load', function() {
+  document.querySelectorALL('.delete').forEach(function(a) {
+    td.addEventListener('ajax:success', function() {
+      var td = a.parentNode;
+      var tr = td.parentNode;
+      tr.style.desplay = 'none';
+    });
+  });
+});
