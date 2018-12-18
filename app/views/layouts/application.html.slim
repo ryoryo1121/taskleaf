@@ -3,10 +3,10 @@ html
   head
     title
       | Task
-    = csrf_meta_tags
-    = csp_meta_tag
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    = csrf_meta_tags
+    = csp_meta_tag
   body
   .app-title.navbar-expand-md.navbar-light.bg-light
     .navbar-brand Taskleaf
