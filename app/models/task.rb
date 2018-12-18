@@ -1,5 +1,7 @@
 class Task < ApplicationRecord
 
+  paginates_per 50
+
   has_one_attached :image
 
   validates :name, presence: true
@@ -29,7 +31,7 @@ class Task < ApplicationRecord
       task.attributes = row.to_hash.slice(*csv_attributes)
       task.save!
     end
-  end 
+  end
 
   def self.ransackable_attributes(auth_object = nil )
     %w[name created_at]
